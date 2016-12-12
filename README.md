@@ -26,7 +26,7 @@
 	2.在app gradle中添加
 
 	dependencies {
-	        compile 'com.github.jiekesiji:ImgBrowser:v1.0.0'
+	        compile 'com.github.jiekesiji:ImageBrowser:v1.0.0'
 	}
 
 **使用步骤：**
