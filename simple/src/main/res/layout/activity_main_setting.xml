@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/activity_gradview_magintop"
+    android:padding="@dimen/activity_setting_padding"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="指示器风格"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:background="@color/ic_default_bg_color"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_setting_line"/>
+
+    <RadioGroup
+        android:id="@+id/rg_setting"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/rb_text"
+            android:textColor="@color/radioButton"
+            android:text="文本风格"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/rb_point"
+            android:textColor="@color/radioButton"
+            android:text="圆点风格"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+
+    <View
+        android:background="@color/ic_default_bg_color"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_setting_line"/>
+
+
+
+</LinearLayout>
