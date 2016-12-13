@@ -47,8 +47,6 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         list.add("http://img4.imgtn.bdimg.com/it/u=2349436394,432792758&fm=21&gp=0.jpg");
         list.add("http://img0.imgtn.bdimg.com/it/u=1928187712,1085842886&fm=21&gp=0.jpg");
         list.add("http://img0.imgtn.bdimg.com/it/u=847160309,407021011&fm=21&gp=0.jpg");
-        list.add("http://img4.imgtn.bdimg.com/it/u=1702430413,3824866561&fm=21&gp=0.jpg");
-        list.add("http://img1.imgtn.bdimg.com/it/u=1465127792,2108785823&fm=21&gp=0.jpg");
         ImgBrowserAdapter adapter = new ImgBrowserAdapter(list,this);
         gridView.setAdapter(adapter);
         gridView.setOnItemClickListener(this);

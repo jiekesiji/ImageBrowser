@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 public interface ISaveCallBack extends Serializable {
     //保存成功
-    void saveSucceed();
+    void saveSucceed(String filePath);
     //保存失败
     void saveFail();
     //已存在
