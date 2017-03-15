@@ -286,8 +286,11 @@ public class UTImageBrowserActivity extends Activity implements ViewTreeObserver
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 long duration = animation.getDuration();
-                long playTime = animation.getCurrentPlayTime();
-                float fraction = duration > 0 ? (float) playTime / duration : 1f;
+//                long playTime = animation.getCurrentPlayTime();
+                float fraction = animation.getAnimatedFraction();
+
+//                float fraction = duration > 0 ? (float) playTime / duration : 1f;
+//                System.out.println("fraction>>>>>>" + fraction + ">>>>>>>>>" + fraction + "duration>>>" + duration + "playTime>>>>" + playTime + "fraction" + playTime/duration);
                 if (fraction > 1) fraction = 1;
                 view.setTranslationX(evaluateInt(fraction, info.imageViewX + info.imageViewWidth / 2 - imageView.getWidth() / 2, 0));
                 view.setTranslationY(evaluateInt(fraction, info.imageViewY + info.imageViewHeight / 2 - imageView.getHeight() / 2, 0));
@@ -358,7 +361,8 @@ public class UTImageBrowserActivity extends Activity implements ViewTreeObserver
             public void onAnimationUpdate(ValueAnimator animation) {
                 long duration = animation.getDuration();
                 long playTime = animation.getCurrentPlayTime();
-                float fraction = duration > 0 ? (float) playTime / duration : 1f;
+//                float fraction = duration > 0 ? (float) playTime / duration : 1f;
+                float fraction = animation.getAnimatedFraction();
                 if (fraction > 1) fraction = 1;
 
                 if (imageView != null) {
