@@ -29,7 +29,9 @@ public class UTPreImageViewHelper {
     private UTLayoutEntity info;
     private ISaveCallBack callBack;
 
-
+    public void clearCache(){
+        entrys.clear();
+    }
 
 
     public UTPreImageViewHelper(Activity activity) {
