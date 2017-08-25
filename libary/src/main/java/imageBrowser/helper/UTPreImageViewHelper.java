@@ -29,6 +29,9 @@ public class UTPreImageViewHelper {
     private UTLayoutEntity info;
     private ISaveCallBack callBack;
 
+
+
+
     public UTPreImageViewHelper(Activity activity) {
         this.activity = activity;
         entrys = new ArrayList<>();
