@@ -47,20 +47,20 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         list.add("http://img4.imgtn.bdimg.com/it/u=2349436394,432792758&fm=21&gp=0.jpg");
         list.add("http://img0.imgtn.bdimg.com/it/u=1928187712,1085842886&fm=21&gp=0.jpg");
         list.add("http://img0.imgtn.bdimg.com/it/u=847160309,407021011&fm=21&gp=0.jpg");
-        ImgBrowserAdapter adapter = new ImgBrowserAdapter(list,this);
+        ImgBrowserAdapter adapter = new ImgBrowserAdapter(list, this);
         gridView.setAdapter(adapter);
         gridView.setOnItemClickListener(this);
     }
 
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
-        switch(checkedId){
+        switch (checkedId) {
             case R.id.rb_text:
                 currentStyle = UTImageBrowserActivity.TYPE_TEXT;
-            break;
-             case R.id.rb_point:
-                 currentStyle = UTImageBrowserActivity.TYPE_POINT;
-            break;
+                break;
+            case R.id.rb_point:
+                currentStyle = UTImageBrowserActivity.TYPE_POINT;
+                break;
         }
 
     }
@@ -71,8 +71,12 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         ImgBrowserAdapter adapter = (ImgBrowserAdapter) parent.getAdapter();
         ImageView imageView;
         for (int i = 0; i < adapter.getCount(); i++) {
-            imageView = (ImageView) gridView.getChildAt(i).findViewById(R.id.img_gridView);
-            helper.addImageView(imageView,list.get(i));
+            if (i % 2 == 0) {
+                imageView = (ImageView) gridView.getChildAt(i).findViewById(R.id.img_gridView);
+            }else {
+                imageView = null;
+            }
+            helper.addImageView(imageView, list.get(i));
         }
         helper.setIndicatorStyle(currentStyle);
         helper.startPreActivity(position);

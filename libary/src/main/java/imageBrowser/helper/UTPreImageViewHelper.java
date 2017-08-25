@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
 import java.io.Serializable;
@@ -42,15 +44,29 @@ public class UTPreImageViewHelper {
     public void addImageView(ImageView imageView, String url){
         UTImageEntity info = new UTImageEntity();
         info.bigImageUrl = url;
-
-        info.imageViewHeight = imageView.getHeight();
-        info.imageViewWidth = imageView.getWidth();
-
         int[] points = new int[2];
-        imageView.getLocationInWindow(points);
+
+        if (imageView != null){
+            info.imageViewHeight = imageView.getHeight();
+            info.imageViewWidth = imageView.getWidth();
+            imageView.getLocationInWindow(points);
+        }else{
+            points[0] = getDeviceInfo()[0]/2;
+            points[1] = getDeviceInfo()[1]/2;
+        }
+
         info.imageViewX = points[0];
         info.imageViewY = points[1] - statusHeight;
         entrys.add(info);
+    }
+
+    public int[] getDeviceInfo(){
+        WindowManager manager = activity.getWindowManager();
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        manager.getDefaultDisplay().getMetrics(outMetrics);
+        int width = outMetrics.widthPixels;
+        int height = outMetrics.heightPixels;
+        return new int[]{width,height};
     }
 
     /**
