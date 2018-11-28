@@ -43,10 +43,10 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         ButterKnife.bind(this);
         rgSetting.setOnCheckedChangeListener(this);
         list = new ArrayList<>();
-        list.add("http://img5.imgtn.bdimg.com/it/u=4026157554,782106015&fm=21&gp=0.jpg");
-        list.add("http://img4.imgtn.bdimg.com/it/u=2349436394,432792758&fm=21&gp=0.jpg");
-        list.add("http://img0.imgtn.bdimg.com/it/u=1928187712,1085842886&fm=21&gp=0.jpg");
-        list.add("http://img0.imgtn.bdimg.com/it/u=847160309,407021011&fm=21&gp=0.jpg");
+        list.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543389812000&di=1768a7c6024f5abfba29258e3eafe91e&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3Dd2824fcdb63eb13550cabff8ce77c2a6%2F32fa828ba61ea8d3af9717219d0a304e251f5859.jpg");
+        list.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543389811999&di=c57a0c625065d04b791ce97128b1d618&imgtype=0&src=http%3A%2F%2Fpic7.nipic.com%2F20100429%2F3017209_133726827311_2.jpg");
+        list.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543389812000&di=1768a7c6024f5abfba29258e3eafe91e&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3Dd2824fcdb63eb13550cabff8ce77c2a6%2F32fa828ba61ea8d3af9717219d0a304e251f5859.jpg");
+        list.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543389812000&di=1768a7c6024f5abfba29258e3eafe91e&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3Dd2824fcdb63eb13550cabff8ce77c2a6%2F32fa828ba61ea8d3af9717219d0a304e251f5859.jpg");
         ImgBrowserAdapter adapter = new ImgBrowserAdapter(list, this);
         gridView.setAdapter(adapter);
         gridView.setOnItemClickListener(this);
