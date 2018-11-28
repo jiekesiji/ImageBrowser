@@ -7,7 +7,6 @@
 /build
 /captures
 .externalNativeBuild
-/gradle
 /.idea
 /simple/libs
 /libary/libs
